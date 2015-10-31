@@ -21,7 +21,7 @@
 		<profile>
 			<id>openshift</id>
 			<build>
-				<finalName>demo</finalName>
+				<finalName>dauphine-demo</finalName>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -29,7 +29,7 @@
 						<version>2.3</version>
 						<configuration>
 							<outputDirectory>deployments</outputDirectory>
-							<warName>ROOT</warName>
+							<warName>dauphine-demo</warName>
 						</configuration>
 					</plugin>
 				</plugins>
