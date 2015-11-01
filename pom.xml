@@ -15,7 +15,7 @@
         <!-- Override Spring version -->
         <spring.version>4.2.1.RELEASE</spring.version>
         <!-- AssertJ is not a part of Spring IO platform, so the version must be provided explicitly -->
-        <assertj-core-version>3.1.0</assertj-core-version>
+        <assertj-core-version>2.2.0</assertj-core-version>
     </properties>
     <parent>
         <groupId>io.spring.platform</groupId>
