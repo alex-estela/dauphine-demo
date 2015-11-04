@@ -11,9 +11,9 @@
 	</appender>
 
 	<jmxConfigurator />
-	<root level="WARN">
+	<root level="INFO">
 		<appender-ref ref="STDOUT" />
 	</root>
 
-	<logger name="cultureproduit.demo" level="ALL" />
+	<logger name="demo" level="ALL" />
 </configuration>

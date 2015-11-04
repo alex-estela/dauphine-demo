@@ -16,9 +16,34 @@
         <!-- /* The message code is returned from the @Controller */ -->
         <div th:replace="fragments/alert :: alert (type=${#strings.toLowerCase(message.type)}, message=#{${message.message}(${#authentication.name})})">&nbsp;</div>
     </th:block>
-    <p>
-        Welcome to the Demo Dauphine application!
+    <p align="center">
+        Welcome to the Demo Dauphine application!<br/>
     </p>
+    <p align="center">
+        As you are now logged in, you can vote for your favorite tool.
+    </p>
+    <p align="center">
+        <b>There are <b th:text="${numberOfVotes}">0</b> vote(s) so far.</b>
+    </p>
+    <form class="form-narrow form-horizontal" action="#" method="post" th:action="@{/vote}">
+	    <th:block th:if="${param.error != null}">
+	        <div th:replace="fragments/alert :: alert (type='danger', message='Sign in error. Please try again.')">Alert</div>
+	    </th:block>
+	    <fieldset>
+	        <legend>Complete this form</legend>
+	        <div class="form-group">
+	            <label for="inputVoteTool" class="col-lg-2 control-label">Favorite tool</label>
+	            <div class="col-lg-10">
+	                <input type="text" class="form-control" id="inputVoteTool" placeholder="Text" name="tool" />
+	            </div>
+	        </div>
+	        <div class="form-group">
+	            <div class="col-lg-offset-2 col-lg-10">
+	                <button type="submit" class="btn btn-default">Vote !</button>
+	            </div>
+	        </div>
+	    </fieldset>
+    </form>
 </div>
 </body>
 </html>
